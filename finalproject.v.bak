@@ -1,0 +1,43 @@
+module finalproject(clk, sevensegmentdisplays);
+	input clk;
+	output sevensegmentdisplays
+	
+endmodule //end of top module
+
+
+module sevensegmentdecoder(position, sevenoutputs);
+	input [4:0] position;
+	output[6:0] sevenoutputs;
+
+	
+	assign E = (~position[4])&(~position[23)&(~position[2])&(~position[1])&(~position[0]);
+	assign L = (~position[4])&(~position[23)&(~position[2])&(~position[1])&(~position[0]);
+	assign e = (~position[4])&(~position[23)&(~position[2])&(~position[1])&(~position[0]);
+	assign n = (~position[4])&(~position[23)&(~position[2])&(~position[1])&(~position[0]);
+	assign I = (~position[4])&(~position[23)&(~position[2])&(~position[1])&(~position[0]);
+	assign space
+	assign P
+	assign o
+	assign l
+	assign i
+	assign c
+	assign h
+	assign r
+	assign O
+	assign n
+	assign a
+	assign k
+	//there is another I
+	assign s
+	//add another space
+	
+	
+	assign sevenoutputs[6]=~(E|e);
+	assign sevenoutputs[5]=~(E|L|e|n);
+	assign sevenoutputs[4]=~(E|L|e|n);
+	assign sevenoutputs[3]=~(E|L|e);
+	assign sevenoutputs[2]=~(n|I);
+	assign sevenoutputs[1]=~(n|I);
+	assign sevenoutputs[0]=~(E|e|n);
+
+endmodule 
